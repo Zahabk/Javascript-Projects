@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 98.8vw;
+        height: 100vh;
+        /* background-color: #797978; */
+        background-color: #212121;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label{
+        font-weight: bolder;
+        font-size: 16px;
+        color: #f1f1f1;
+        padding-right: 10px;
+      }
+      #height,
+      #weight {
+        width: 200px;
+        height: 28px;
+        /* margin-top: 30px; */
+        border: 1px solid black;
+      }
+
+      #weight-guide {
+        margin-left: 80px;
+        margin-top: 40px;
+        color: #f1f1f1;
+      }
+
+      #results {
+        font-size: 20px;
+        /* margin-left: 90px; */
+        margin-top: 25px;
+        color: #f1f1f1;
+        text-align: center;
+      }
+
+      button {
+        width: 250px;
+        height: 35px;
+        margin-left: 50px;
+        margin-top: 10px;
+        background-color: #1f5dba;
+        padding: 1px 30px;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #212121;
+        font-size: 18px;
+      }
+
+      h1 {
+        color: #f1c4ed;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        /* width: 97vw; */
+        padding: 0.8rem;
+        gap: 0.5rem;
+        border-bottom: solid 1px #aaa;
+        background-color: #ebe6e6;
+      }
+      nav a {
+        display: inline-block;
+        min-width: 9rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        border: solid 1px rgb(22, 22, 22);
+        text-align: center;
+        text-decoration: none;
+        color: #1b1b1b;
+      }
+      nav a[aria-current="page"] {
+        color: #000;
+        background-color: #d4d4d4;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" aria-current="page">Home</a>
+    </nav>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p>
+          <label for="height">Height in CM: </label>
+          <input type="text" name="height" id="height">
+        </p>
+        <p>
+          <label for="weight">Weight in KG: </label>
+          <input type="text" name="weight" id="weight">
+        </p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        <!-- <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 to 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div> -->
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
